@@ -1,0 +1,38 @@
+extends layouts/layout.pug
+
+block title
+    title Доставка и оплата | Eterlique
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__list-item
+                a.breadcrumbs__list-link(href="main.html") Главная
+
+            li.breadcrumbs__list-item.is--current
+                a.breadcrumbs__list-link(href="shipping-payment.html") Доставка и оплата
+
+    .main-block
+        .tabs
+            ul.tabs__list
+                li.tabs__list-item.tabs__list-item--active
+                    a.tabs__list-item-btn(href="shipping-payment.html") Доставка и оплата
+
+                li.tabs__list-item
+                    a.tabs__list-item-btn(href="return.html") Условия возврата
+
+                li.tabs__list-item
+                    a.tabs__list-item-btn(href="faq.html") Вопросы и ответы
+
+        .text-block
+            h1 Оплата производится:
+
+            ul
+                li 
+                    | Онлайн на сайте <br> При выборе данного способа оплаты со страницы оформления заказа вы будете перенаправлены на страницу сервиса life.pay.ru, где необходимо указать данные вашей карты и подтвердить платеж. <br><br>
+
+                li
+                    | При получении*: – картой; <br> - картой;<br> – наличными.
+
+            p * Данный способ оплаты доступен только при доставке курьером.
+

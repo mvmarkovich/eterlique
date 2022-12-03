@@ -1,0 +1,186 @@
+extends layouts/layout.pug
+
+block title
+    title Карточка товара | Eterlique
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__list-item
+                a.breadcrumbs__list-link(href="main.html") Главная
+
+            li.breadcrumbs__list-item
+                a.breadcrumbs__list-link(href="catalog.html") Каталог
+
+            li.breadcrumbs__list-item.is--current
+                a.breadcrumbs__list-link(href="product-card.html") Брюки
+
+    .main-block
+        .product-card
+            .product-card__row
+                .product-card__col
+                    .product-card__info
+                        p.product-card__info-desc Брюки классической модели с асимметричной застёжкой и завышенной посадкой. Модель выполнена из дышащей смеси хлопка и вискозы, что идеально подойдёт на тёплое время года.
+
+                    .product-card__info
+                        h5.product-card__info-subtitle Размер товара на модели
+                        p.product-card__info-desc 40
+
+                    .product-card__info
+                        h5.product-card__info-subtitle Параметры модели
+                        p.product-card__info-desc Рост 170 см, грудь 79 см, талия 58 см, бедра 89 см.
+
+                    .product-card__info
+                        h5.product-card__info-subtitle Сезон
+                        p.product-card__info-desc Мульти
+
+                    .product-card__info
+                        h5.product-card__info-subtitle Уход
+                        p.product-card__info-desc Любить и беречь
+
+                .product-card__gallery
+                    .product-card__carousel
+                        .swiper-wrapper
+                            .swiper-slide.product-card__gallery-item
+                                a.product-card__gallery-item-img--wrap(href="img/content/product-card/item_1.webp" data-fancybox="gallery")
+                                    img.product-card__gallery-item-img(src="img/content/product-card/item_1.webp" width="536" height="743" alt="Брюки")
+
+                            .swiper-slide.product-card__gallery-item
+                                a.product-card__gallery-item-img--wrap(href="img/content/product-card/item_2.webp" data-fancybox="gallery")
+                                    img.product-card__gallery-item-img(src="img/content/product-card/item_2.webp" width="536" height="743" alt="Брюки")
+
+                            .swiper-slide.product-card__gallery-item
+                                a.product-card__gallery-item-img--wrap(href="img/content/product-card/item_3.webp" data-fancybox="gallery")
+                                    img.product-card__gallery-item-img(src="img/content/product-card/item_3.webp" width="536" height="743" alt="Брюки")
+
+                            .swiper-slide.product-card__gallery-item
+                                a.product-card__gallery-item-img--wrap(href="img/content/product-card/item_4.webp" data-fancybox="gallery")
+                                    img.product-card__gallery-item-img(src="img/content/product-card/item_4.webp" width="536" height="743" alt="Брюки")
+
+                    .carousel-pagination
+                            
+                .product-card__col
+                    .product-card__code Артикул: ET1031
+
+                    h1.product-card__title Брюки cо стрелками
+                    .product-card__price 5 500 ₽
+
+                    .product-card__info
+                        h5.product-card__info-subtitle Cостав
+                        p.product-card__info-desc Хлопок - 70%, Вискоза - 30%
+
+                    .product-card__info
+                        h5.product-card__info-subtitle Цвет
+                        .filter__colors
+                            .filter__colors-row
+                                .input
+                                    input.input__color#filter-color-1(type="checkbox" name="filter-color-1")
+                                    label.input__color-label(for="filter-color-1" style="background-color:#DCAE8E")
+
+                                .input
+                                    input.input__color#filter-color-2(type="checkbox" name="filter-color-2")
+                                    label.input__color-label(for="filter-color-2" style="background-color:#FFF6DE")
+
+                                .input
+                                    input.input__color#filter-color-3(type="checkbox" name="filter-color-3")
+                                    label.input__color-label(for="filter-color-3" style="background-color:#6D7B60")
+
+                    .product-card__info
+                        h5.product-card__info-subtitle Размер
+                        .filter__sizes
+                            ul.filter__sizes-list
+                                li.filter__sizes-item
+                                    a.filter__sizes-link(href="catalog.html") 40
+
+                                li.filter__sizes-item
+                                    a.filter__sizes-link(href="catalog.html") 42
+
+                                li.filter__sizes-item
+                                    a.filter__sizes-link(href="catalog.html") 44
+
+                                li.filter__sizes-item
+                                    a.filter__sizes-link(href="catalog.html") 46
+
+                        button.btn.btn--reset.product-card__info-link(aria-label="Modal sizes") Таблица размеров
+
+                    .btn--block.product-card__buy
+                        a.btn.btn--border(href="#") Добавить в корзину
+
+                    a.product-card__link(href="shipping-payment.html") Информация о доставке и оплате
+
+        .catalog.catalog--recommend
+            h2 Дополните свой образ
+
+            .catalog__row
+                .catalog__card
+                    .catalog__card--wrap
+                        .catalog__card-head
+                            a.catalog__card-img--wrap(href="product-card.html")
+                                img.catalog__card-img(src="img/content/catalog/item_4.webp" width="435" height="611" alt="Название товара")
+
+                            .catalog__card-color--wrap
+                                .catalog__card-color(style="background-color:#DCAE8E")
+                                .catalog__card-color(style="background-color:#9EA0A0")
+                                .catalog__card-color(style="background-color:#6D7B60")
+
+                        .catalog__card-info
+                            .catalog__card-title Плащ
+
+                            .catalog__card-price
+                                .catalog__card-price-now 17 000 ₽
+
+                .catalog__card
+                    .catalog__card--wrap
+                        .catalog__card-head
+                            a.catalog__card-img--wrap(href="product-card.html")
+                                img.catalog__card-img(src="img/content/catalog/item_6.webp" width="435" height="611" alt="Название товара")
+
+                            .catalog__card-color--wrap
+                                .catalog__card-color(style="background-color:#DCAE8E")
+                                .catalog__card-color(style="background-color:#9EA0A0")
+                                .catalog__card-color(style="background-color:#6D7B60")
+
+                        .catalog__card-info
+                            .catalog__card-title Платье
+
+                            .catalog__card-price
+                                .catalog__card-price-now 6 900 ₽
+
+                .catalog__card
+                    .catalog__card--wrap
+                        .catalog__card-head
+                            a.catalog__card-img--wrap(href="product-card.html")
+                                img.catalog__card-img(src="img/content/catalog/item_3.webp" width="435" height="611" alt="Название товара")
+
+                            .catalog__card-color--wrap
+                                .catalog__card-color(style="background-color:#DCAE8E")
+                                .catalog__card-color(style="background-color:#9EA0A0")
+                                .catalog__card-color(style="background-color:#6D7B60")
+
+                        .catalog__card-info
+                            .catalog__card-title Пиджак
+
+                            .catalog__card-price
+                                .catalog__card-price-now 16 000 ₽
+
+                .catalog__card
+                    .catalog__card--wrap
+                        .catalog__card-head
+                            a.catalog__card-img--wrap(href="product-card.html")
+                                img.catalog__card-img(src="img/content/catalog/item_5.webp" width="435" height="611" alt="Название товара")
+
+                            .catalog__card-color--wrap
+                                .catalog__card-color(style="background-color:#DCAE8E")
+                                .catalog__card-color(style="background-color:#9EA0A0")
+                                .catalog__card-color(style="background-color:#6D7B60")
+
+                        .catalog__card-info
+                            .catalog__card-title Блуза
+
+                            .catalog__card-price
+                                .catalog__card-price-now 5 500 ₽
+
+                
+                
+
+        

@@ -1,0 +1,62 @@
+.contacts
+    &__row
+        display: flex
+        justify-content: @md space-between
+        align-items: @md center
+        flex-direction: column @md row
+
+    &__info
+        padding: @md 0 120px 0 0
+        width: @md 50%
+        order: 2 @md 1
+
+        .social
+            margin: 40px 0 0 @lg 58px 0 0
+
+    &__title
+        text: #461510 400 11px 1.5 0.04em @md 14px @lg 18px @xl 20px
+        text-transform: uppercase
+        margin: 0 0 24px @lg 0 0 30px
+
+    &__link
+        text: #461510 400 14px 1.7 @md 16px @lg 18px @xl 20px
+
+        &:hover
+            text-decoration: underline
+
+    &__img
+        position: absolute 0 null 0
+        object-fit: @md-down cover
+        height: @md-down 100%
+
+        &--wrap
+            position: relative
+            width: 100% @md 50%
+            padding: 90% 0 0 @md 33.5% 0 0
+            overflow: hidden
+            order: 1 @md 2
+            margin: @md-down 0 0 48px
+
+.feedback
+    margin: 64px 0 @md 100px 0 @lg 150px 0 @xl 180px 0 
+
+    &__title
+        text: 400 11px 1.5 0.04em @md 14px @lg 18px @xl 20px
+        text-transform: uppercase
+        margin: 0 0 24px @lg 0 0 30px
+
+    &__desc
+        max-width: 430px
+        margin: 30px 0
+
+    &__form
+        margin: 0 0 48px @md 0 0 64px @xl 90px 0 0
+
+        .input--textarea
+            width: 100% @lg calc(48% + 20px)
+
+        .form__footer
+            width: 100% @lg calc(72% + 40px)
+
+        .form__send
+            width: 100% @sm 210px @xl 280px

@@ -1,0 +1,182 @@
+.btns-spacer
+  display: flex
+  flex-wrap: wrap
+
+  &-between
+    justify-content: space-between
+
+  & > *
+    margin: 0 16px 0 0
+
+    &:last-child
+      margin: 0
+
+.form
+  &__row
+    display: flex
+    flex-wrap: wrap
+
+    > .input
+      margin: 0 0 32px @md 0 20px 20px 0
+      width: 100% @md calc(33.3% - 14px) @lg 24%
+
+      &:last-child
+        margin: * 0 * *
+
+  &__footer
+    display: @sm flex
+    align-items: @sm center
+    justify-content: @sm space-between
+
+    ^&__send
+      margin: 0 @sm 0 0 0 48px
+      width: 100% @sm auto
+
+  &__send
+    margin: 48px 0 0
+
+  &__agree
+    text: 400 10px 1.3 0.02em @lg 12px
+    margin: 20px 0 0
+
+    a
+      color: #461510
+      text-decoration: underline
+
+      &:hover
+        text-decoration: none
+
+.input
+  margin: 20px 0
+  position: relative
+
+  &__label
+    font-family: $font
+    text: #B3B3B3 400 11px 1.3 @sm 14px @lg 21px
+    margin: 0 0 4px
+
+  &__elem
+    position: relative
+    font-family: $font
+    text: #461510 400 12px 1.4 @lg 14px @xl 16px
+    min-height: 48px
+    background: #fff
+    border: none
+    border-bottom: 1px solid #461510
+    border-radius: 0
+    padding: 0
+    outline: 0
+    width: 100%
+    resize: none
+
+    &::placeholder
+      color: rgba(70, 21, 16, .6)
+
+  &__checkbox
+    display: none
+
+    &:checked
+
+      & + ^&-label
+        &:before
+          background-image: svg-load("icons/checkbox-checked.svg")
+
+    &-label
+      cursor: pointer
+      user-select: none
+      font-family: $font
+      text: #461510 400 12px 1.3 .02em @lg 14px @xl 16px
+      display: block
+      padding: 0 0 0 26px @md 0 0 0 36px
+
+      a
+        text-decoration: underline
+
+        &:hover
+          text-decoration: none
+
+      &:before
+        content: ""
+        display: block
+        size: 16px @md 24px
+        min-width: 16px @md 24px
+        margin: 0 12px 0 0
+        position: absolute 
+        top: -1px
+        left: 0
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 12px @md 20px
+        background-image: resolve("icons/checkbox.svg")
+
+  &__color
+    display: none
+
+    &:checked
+
+      & + ^&-label
+        &:before
+
+    &-label
+      display: block
+      size: 24px @xl 28px
+      min-width: 24px @xl 28px 
+      border: 4px solid rgba(255, 255, 255, 0.8)
+      border-radius: 50%
+
+  &--number
+    min-width: 120px @lg 144px @xl 172px
+    max-width: 120px @lg 144px @xl 172px
+    height: 32px @lg 40px @xl 52px
+    display: flex
+    margin: 0
+
+  &__number
+    text: #461510 400 18px 1.3 @lg 24px
+    -moz-appearance: textfield
+    min-height: 32px @lg 40px @xl 52px
+    text-align: center
+    outline: none
+    max-width: 54px @lg 62px @xl 68px
+    min-width: 54px @lg 62px @xl 68px
+    border-radius: 0
+    width: 100%
+    padding: 0 12px
+    border: 0
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+
+    &-up,
+    &-down
+      text: #461510 400 18px 30px @lg 22px 38px @xl 24px 50px
+      text-align: center
+      size: 32px @lg 40px @xl 52px
+      min-width: 32px @lg 40px @xl 52px
+      cursor: pointer
+      border: 0.5px solid rgba(70, 21, 16, 0.6)
+      border-radius: 50%
+      user-select: none
+      transition: .2s ease-in-out
+
+      &:hover
+        color: #fff
+        background: rgba(70, 21, 16, 0.6)
+
+textarea.input__elem
+  min-height: 48px
+  padding: 8px *
+
+select.input__elem
+  appearance: none
+
+  option[disabled]
+    display: none
+
+.input-required
+  &:after
+    content: '\2217'
+    text: #461510 400 16px 1.4
+    position: absolute 10px 0 null null

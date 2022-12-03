@@ -1,0 +1,40 @@
+extends layouts/layout.pug
+
+block title
+    title Условия возврата | Eterlique
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__list-item
+                a.breadcrumbs__list-link(href="main.html") Главная
+
+            li.breadcrumbs__list-item.is--current
+                a.breadcrumbs__list-link(href="return.html") Возврата
+
+    .main-block
+        .tabs
+            ul.tabs__list
+                li.tabs__list-item
+                    a.tabs__list-item-btn(href="shipping-payment.html") Доставка и оплата
+
+                li.tabs__list-item.tabs__list-item--active
+                    a.tabs__list-item-btn(href="return.html") Условия возврата
+
+                li.tabs__list-item
+                    a.tabs__list-item-btn(href="faq.html") Вопросы и ответы
+
+        .text-block
+            h1 Требования при возврате товара
+
+            p Возврат осуществляется силами и за счёт покупателя*.
+            ul
+                li Товар, который вы хотите вернуть, не должен иметь каких-либо следов эксплуатации.
+                li Пожалуйста, сохраните упаковку товара и все фабричные ярлыки.
+                li Заполните заявление на возврат.
+                li К заявлению приложите копию первой страницы вашего паспорта и товарный или кассовый чек, подтверждающий покупку.
+                
+            p Средства будут перечислены вам в течение _ дней на карту, с которой производилась оплата. В случае если вы производили оплату за товар наличными курьеру, в Заявлении укажите ваш расчётный счёт.
+
+            p *  За исключением случаев производственного дефекта или брака.
+

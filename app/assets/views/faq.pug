@@ -1,0 +1,46 @@
+extends layouts/layout.pug
+
+block title
+    title Вопросы и ответы | Eterlique
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__list-item
+                a.breadcrumbs__list-link(href="main.html") Главная
+
+            li.breadcrumbs__list-item.is--current
+                a.breadcrumbs__list-link(href="faq.html") Вопросы и ответы
+
+    .main-block
+        .tabs
+            ul.tabs__list
+                li.tabs__list-item
+                    a.tabs__list-item-btn(href="shipping-payment.html") Доставка и оплата
+
+                li.tabs__list-item
+                    a.tabs__list-item-btn(href="return.html") Условия возврата
+
+                li.tabs__list-item.tabs__list-item--active
+                    a.tabs__list-item-btn(href="faq.html") Вопросы и ответы
+
+        .text-block
+            .accordion
+                .accordion__item
+                    button.btn.btn--reset.accordion__item-toggle(aria-label="Toggle accordion") Как выбрать размер?
+                    .accordion__item-body  
+                        .accordion__item-body-pad
+                            p Изделия Eterlique соответствуют российской размерной сетке*: <br> XXS – 40; <br> XS – 42; <br> S – 44; <br> M – 46. <br> *соответствует стандартам ГОСТ
+                            p Мы молодой бренд, который только делает первые шаги к желаемой концепции, поэтому в наших планах – увеличить представленную размерную сетку ассортимента.
+
+                .accordion__item
+                    button.btn.btn--reset.accordion__item-toggle(aria-label="Toggle accordion") Как разрабатывается ассортимент в Eterlique?
+                    .accordion__item-body  
+                        .accordion__item-body-pad
+                            p Текст 2
+
+                .accordion__item
+                    button.btn.btn--reset.accordion__item-toggle(aria-label="Toggle accordion") Как ухаживать за изделиями?
+                    .accordion__item-body  
+                        .accordion__item-body-pad
+                            p Текст 3

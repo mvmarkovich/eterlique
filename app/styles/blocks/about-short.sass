@@ -1,0 +1,54 @@
+.about-short
+    margin: 100px 0 @lg 150px 0 200px @xl 200px 0
+
+    &__row
+        display: @md flex
+        align-items: @md flex-start
+        justify-content: @md space-between
+
+    &__info
+        width: 100% @md 39%
+
+        p
+            max-width: @md 450px
+
+    &__imgs
+        margin: @md 180px 0 0 @lg 0
+
+        &--wrap
+            position: relative
+            width: auto @md 49%
+            margin: 64px 0 0 24% @md 0
+
+        &-tiny
+            width: 36%
+            position: absolute
+            left: -18%
+            bottom: 8%
+
+    &--reverse
+        margin: @md-down 60px 0 0
+        
+        ^&__row
+            flex-direction: @md row-reverse
+
+        ^&__info
+            width: @md 50%
+
+            p
+                margin: 0 0 40px @md 0 0 30%
+
+                &:last-child
+                    margin: 0
+
+        ^&__imgs
+            margin: @md 0 18% 0 0
+
+            &--wrap
+                width: @md 35%
+
+            &-tiny
+                left: @md auto
+                right: @md -18%
+                width: @md 27%
+                min-width: @md 130px @lg 180px @xl 240px

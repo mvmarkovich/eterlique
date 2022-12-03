@@ -1,0 +1,124 @@
+.btn
+  font-family: $font
+  text: #461510 400 10px @lg 12px @xl 14px
+  line-height: unset
+  position: relative
+  text-decoration: none
+  background: transparent
+  text-transform: uppercase
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  padding: 0 30px
+  min-height: 48px @xl 62px
+  transition: .2s ease
+  transition: 0
+  outline: 0
+  cursor: pointer
+  user-select: none
+  white-space: nowrap
+
+  &--reset
+    margin: 0
+    padding: 0
+    outline: 0
+    border: 0
+    min-height: 1px @xl 1px
+    background: transparent
+    cursor: pointer
+
+  &--full
+    width: 100%
+
+  &--block
+    display: flex
+
+  &--border
+    color: #461510
+    background-color: ##fff
+    border: 1px solid rgba(70, 21, 16, 0.6)
+
+    &:hover
+      color: #fff
+      background-color: rgba(70, 21, 16, 0.6)
+      border-color: rgba(70, 21, 16, 0.6)
+
+    &:active
+      color: #fff
+      background-color: rgba(70, 21, 16, 0.3)
+      border-color: rgba(70, 21, 16, 0.3)
+  
+  &--search,
+  &--cross,
+  &--cart
+    &:before
+      content: ''
+      size: 48px
+      min-width: 48px
+      background-position: center
+      background-size: 18px
+      background-repeat: no-repeat
+
+  &--reset-form
+    &:before
+      content: ''
+      size: 24px
+      min-width: 24px
+      background-position: center
+      background-size: 20px
+      background-repeat: no-repeat
+
+  &--categories,
+  &--filter,
+  &--arrow-right
+    &:after
+      content: ''
+      size: 24px
+      min-width: 24px
+      background-position: center
+      background-size: 24px
+      background-repeat: no-repeat
+      margin: 0 0 0 4px
+
+  &--search
+    &:before
+      background-image: resolve("icons/search.svg")
+
+  &--cross
+    &:before
+      background-image: resolve("icons/cross.svg")
+      background-size: 24px
+
+  &--cart
+    &:before
+      background-image: resolve("icons/cart.svg")
+      background-size: 24px
+
+  &--reset-form
+    &:before
+      background-image: resolve("icons/reset-form.svg")
+
+  &--arrow-right
+    &:after
+      background-image: resolve("icons/arrow-right.svg")
+
+  &--categories
+    &:after
+      background-image: resolve("icons/arrow-right.svg")
+      transition: transform .2s
+
+    &.is-active
+      &:after
+        transform: rotate(90deg)
+
+  &--filter
+    &:after
+      background-image: resolve("icons/plus.svg")
+      transition: transform .2s
+
+    &.is-active
+      &:after
+        transform: rotate(45deg)
+
+
+

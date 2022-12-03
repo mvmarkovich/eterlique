@@ -1,0 +1,181 @@
+.filter
+    &__categories
+        position: fixed @md relative
+        top: 210px @sm 260px @md auto
+        left: 0 @md auto
+        right: 0 @md auto
+        bottom: 0 @md auto
+        overflow: @md-down auto
+        padding: 8px 20px 20px @sm * 40px 40px @md 0 
+        opacity: @md-down 0
+        visibility: @md-down hidden
+        background: @md-down #fff
+        z-index: @md-down 991
+        transition: .2s ease-in-out
+        margin: @md 0 0 52px @lg 0 0 64px
+
+        &-list
+            list-style: none
+            padding: 0
+            margin: 0
+
+        &-item
+            margin: 0 0 20px @md 0 0 12px
+
+            &:first-child
+                display: flex
+                align-items: center
+
+                &:before
+                    content: ''
+                    size: 27px 1px
+                    background: #461510
+                    margin: 0 16px 0 0
+                    display: inline-flex
+
+        &-link
+            text: #461510 400 14px 1.3 .045em @md 10px @lg 12px @xl 14px
+            text-transform: uppercase
+
+        &-count
+            position: relative
+            text: rgba(69, 20, 16, 0.62) 400 10px 1 .025em @xl 12px
+            text-transform: uppercase
+            display: inline
+            top: -8px
+            left: 4px
+
+        &.is-active
+            opacity: @md-down 1
+            visibility: @md-down visible
+
+    &__accordion
+        .accordion__item-toggle
+            &:after
+                display: @md-down none
+
+        .accordion__item-body
+            max-height: @md-down 100% !important
+
+    &__sizes
+        &-list
+            list-style: none
+            padding: 0
+            margin: 0 -10px -10px
+
+            display: flex
+            align-items: center
+
+        &-item
+            padding: 0 10px
+            margin: 0 0 10px
+
+        &-link
+            text: #461510 400 14px 1.3 .045em @md 10px @lg 12px @xl 14px
+
+    &__price
+        .input
+            margin: 20px 0 0
+
+    &__colors
+        &-row
+            display: flex
+            flex-wrap: wrap
+            margin: 0 -7px -20px
+            
+        .input
+            padding: 0 7px
+            margin: 0 0 20px
+
+    &__body
+        position: fixed @md relative
+        top: 210px @sm 260px @md auto
+        left: 0 @md auto
+        right: 0 @md auto
+        bottom: 0 @md auto
+        overflow: @md-down auto
+        padding: 0 20px 20px @sm * 40px 40px @md 0 
+        background: @md-down #fff
+        z-index: @md-down 991
+        opacity: @md-down 0
+        visibility: @md-down hidden
+        transition: .2s ease-in-out
+
+        &.is-active
+            opacity: @md-down 1
+            visibility: @md-down visible
+
+    &__nav
+        display: @md none
+        margin: 64px 0 0 @md 0
+
+        .btn
+            width: 100%
+            margin: 0 0 20px
+
+            &:last-child
+                margin: 0
+
+.input
+    &__range
+        position: absolute
+        pointer-events: none
+        -webkit-appearance: none
+        z-index: 2
+        height: 15px
+        width: 100%
+        opacity: 0
+
+        &::-webkit-slider-thumb
+            pointer-events: all
+            size: 14px
+            border-radius: 0
+            border: 0 none
+            background-color: red
+            -webkit-appearance: none
+
+        &-output
+            position: absolute
+            top: -20px
+            border: none
+            padding: 0
+            text: #461510 400 12px 1 .045em 
+            resize: none
+
+        &-label
+            position: relative
+            height: 14px
+            z-index: 1
+            margin: 0 7px
+
+        &-track
+            position: absolute 7px -14px 0 -14px
+            z-index: 1
+            height: 1px
+            background-color: rgba(70, 21, 16, .2)
+
+        &-slide
+            position: absolute 7px 0 0 0
+            z-index: 2
+            background-color: rgba(70, 21, 16, .6)
+            height: 1px
+
+        &-thumb
+            position: absolute
+            z-index: 3
+            size: 14px
+            border: 1px solid rgba(70, 21, 16, .6)
+            background: #fff
+            border-radius: 50%
+
+            &-left
+                transform: translateX(-7px)
+
+                ^^&-output
+                    left: 0
+
+            &-right
+                transform: translateX(7px)
+
+                ^^&-output
+                    right: 0

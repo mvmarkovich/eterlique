@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#000">
+    <title>Карточка товара | Eterlique</title>
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="libs/fancybox/fancybox.min.css">
+    <link href="styles/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__row"><a class="header__logo" href="main.html"><img class="header__logo-img" src="img/icons/logo.svg" width="165" height="41" alt="Eterlique"></a>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" aria-label="Dropmenu">Меню </a>
+                <div class="header__nav-child">
+                  <ul class="header__nav-child-list">
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="catalog.html">Каталог</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="shipping-payment.html">Доставка и оплата</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="return.html">Возврат</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="about-us.html">О бренде</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="contacts.html">Контакты</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header__nav-item"><a class="header__nav-link" href="catalog.html">Каталог</a></li>
+            </ul>
+          </nav>
+          <div class="header__panel">
+            <div class="header__search">
+              <button class="btn btn--reset btn--search header__search-btn" aria-label="search"></button>
+              <form class="header__search-form" action="/" method="/">
+                <input class="input__elem" type="text" placeholder="Поиск">
+                <button class="btn btn--reset btn--reset-form" aria-label="Remove value form"></button>
+                <button class="btn btn--reset btn--search" type="button" aria-label="Send form"></button>
+              </form>
+            </div>
+            <div class="header__cart"><a class="btn btn--reset btn--cart" href="basket.html">Корзина (2)</a>
+              <div class="header__cart-popup">
+                <div class="header__cart-list">
+                  <div class="header__cart-item">
+                    <div class="header__cart-item-img--wrap"><img class="header__cart-item-img" src="img/content/header-cart/item_1.webp" width="153" height="218" alt="Плащ"></div>
+                    <div class="header__cart-item-info">
+                      <div class="header__cart-item-head">
+                        <div class="header__cart-item-title">Плащ</div>
+                        <div class="header__cart-item-price">5 500 ₽</div>
+                      </div>
+                      <div class="header__cart-item-body">
+                        <ul class="header__cart-item-list">
+                          <li> 
+                            <p>Размер: </p><span>S</span>
+                          </li>
+                          <li> 
+                            <p>Цвет: </p><span>серый</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__cart-item">
+                    <div class="header__cart-item-img--wrap"><img class="header__cart-item-img" src="img/content/header-cart/item_2.webp" width="153" height="218" alt="Брюки со стрелками"></div>
+                    <div class="header__cart-item-info">
+                      <div class="header__cart-item-head">
+                        <div class="header__cart-item-title">Брюки со стрелками</div>
+                        <div class="header__cart-item-price">17 000 ₽</div>
+                      </div>
+                      <div class="header__cart-item-body">
+                        <ul class="header__cart-item-list">
+                          <li> 
+                            <p>Размер: </p><span>M</span>
+                          </li>
+                          <li> 
+                            <p>Цвет:</p><span>бежевый</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header__cart-footer">
+                  <div class="header__cart-total">Сумма: 22 500 ₽</div>
+                  <div class="btn--block"><a class="btn btn--border btn--full" href="basket.html">Оформить заказ</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page-container container">
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="catalog.html">Каталог</a></li>
+          <li class="breadcrumbs__list-item is--current"><a class="breadcrumbs__list-link" href="product-card.html">Брюки</a></li>
+        </ul>
+      </div>
+      <div class="main-block">
+        <div class="product-card">
+          <div class="product-card__row">
+            <div class="product-card__col">
+              <div class="product-card__info">
+                <p class="product-card__info-desc">Брюки классической модели с асимметричной застёжкой и завышенной посадкой. Модель выполнена из дышащей смеси хлопка и вискозы, что идеально подойдёт на тёплое время года.</p>
+              </div>
+              <div class="product-card__info">
+                <h5 class="product-card__info-subtitle">Размер товара на модели</h5>
+                <p class="product-card__info-desc">40</p>
+              </div>
+              <div class="product-card__info">
+                <h5 class="product-card__info-subtitle">Параметры модели</h5>
+                <p class="product-card__info-desc">Рост 170 см, грудь 79 см, талия 58 см, бедра 89 см.</p>
+              </div>
+              <div class="product-card__info">
+                <h5 class="product-card__info-subtitle">Сезон</h5>
+                <p class="product-card__info-desc">Мульти</p>
+              </div>
+              <div class="product-card__info">
+                <h5 class="product-card__info-subtitle">Уход</h5>
+                <p class="product-card__info-desc">Любить и беречь</p>
+              </div>
+            </div>
+            <div class="product-card__gallery">
+              <div class="product-card__carousel">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide product-card__gallery-item"><a class="product-card__gallery-item-img--wrap" href="img/content/product-card/item_1.webp" data-fancybox="gallery"><img class="product-card__gallery-item-img" src="img/content/product-card/item_1.webp" width="536" height="743" alt="Брюки"></a></div>
+                  <div class="swiper-slide product-card__gallery-item"><a class="product-card__gallery-item-img--wrap" href="img/content/product-card/item_2.webp" data-fancybox="gallery"><img class="product-card__gallery-item-img" src="img/content/product-card/item_2.webp" width="536" height="743" alt="Брюки"></a></div>
+                  <div class="swiper-slide product-card__gallery-item"><a class="product-card__gallery-item-img--wrap" href="img/content/product-card/item_3.webp" data-fancybox="gallery"><img class="product-card__gallery-item-img" src="img/content/product-card/item_3.webp" width="536" height="743" alt="Брюки"></a></div>
+                  <div class="swiper-slide product-card__gallery-item"><a class="product-card__gallery-item-img--wrap" href="img/content/product-card/item_4.webp" data-fancybox="gallery"><img class="product-card__gallery-item-img" src="img/content/product-card/item_4.webp" width="536" height="743" alt="Брюки"></a></div>
+                </div>
+              </div>
+              <div class="carousel-pagination"></div>
+            </div>
+            <div class="product-card__col">
+              <div class="product-card__code">Артикул: ET1031</div>
+              <h1 class="product-card__title">Брюки cо стрелками</h1>
+              <div class="product-card__price">5 500 ₽</div>
+              <div class="product-card__info">
+                <h5 class="product-card__info-subtitle">Cостав</h5>
+                <p class="product-card__info-desc">Хлопок - 70%, Вискоза - 30%</p>
+              </div>
+              <div class="product-card__info">
+                <h5 class="product-card__info-subtitle">Цвет</h5>
+                <div class="filter__colors">
+                  <div class="filter__colors-row">
+                    <div class="input">
+                      <input class="input__color" id="filter-color-1" type="checkbox" name="filter-color-1">
+                      <label class="input__color-label" for="filter-color-1" style="background-color:#DCAE8E"></label>
+                    </div>
+                    <div class="input">
+                      <input class="input__color" id="filter-color-2" type="checkbox" name="filter-color-2">
+                      <label class="input__color-label" for="filter-color-2" style="background-color:#FFF6DE"></label>
+                    </div>
+                    <div class="input">
+                      <input class="input__color" id="filter-color-3" type="checkbox" name="filter-color-3">
+                      <label class="input__color-label" for="filter-color-3" style="background-color:#6D7B60"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__info">
+                <h5 class="product-card__info-subtitle">Размер</h5>
+                <div class="filter__sizes">
+                  <ul class="filter__sizes-list">
+                    <li class="filter__sizes-item"><a class="filter__sizes-link" href="catalog.html">40</a></li>
+                    <li class="filter__sizes-item"><a class="filter__sizes-link" href="catalog.html">42</a></li>
+                    <li class="filter__sizes-item"><a class="filter__sizes-link" href="catalog.html">44</a></li>
+                    <li class="filter__sizes-item"><a class="filter__sizes-link" href="catalog.html">46</a></li>
+                  </ul>
+                </div>
+                <button class="btn btn--reset product-card__info-link" aria-label="Modal sizes">Таблица размеров</button>
+              </div>
+              <div class="btn--block product-card__buy"><a class="btn btn--border" href="#">Добавить в корзину</a></div><a class="product-card__link" href="shipping-payment.html">Информация о доставке и оплате</a>
+            </div>
+          </div>
+        </div>
+        <div class="catalog catalog--recommend">
+          <h2>Дополните свой образ</h2>
+          <div class="catalog__row">
+            <div class="catalog__card">
+              <div class="catalog__card--wrap">
+                <div class="catalog__card-head"><a class="catalog__card-img--wrap" href="product-card.html"><img class="catalog__card-img" src="img/content/catalog/item_4.webp" width="435" height="611" alt="Название товара"></a>
+                  <div class="catalog__card-color--wrap">
+                    <div class="catalog__card-color" style="background-color:#DCAE8E"></div>
+                    <div class="catalog__card-color" style="background-color:#9EA0A0"></div>
+                    <div class="catalog__card-color" style="background-color:#6D7B60"></div>
+                  </div>
+                </div>
+                <div class="catalog__card-info">
+                  <div class="catalog__card-title">Плащ</div>
+                  <div class="catalog__card-price">
+                    <div class="catalog__card-price-now">17 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__card">
+              <div class="catalog__card--wrap">
+                <div class="catalog__card-head"><a class="catalog__card-img--wrap" href="product-card.html"><img class="catalog__card-img" src="img/content/catalog/item_6.webp" width="435" height="611" alt="Название товара"></a>
+                  <div class="catalog__card-color--wrap">
+                    <div class="catalog__card-color" style="background-color:#DCAE8E"></div>
+                    <div class="catalog__card-color" style="background-color:#9EA0A0"></div>
+                    <div class="catalog__card-color" style="background-color:#6D7B60"></div>
+                  </div>
+                </div>
+                <div class="catalog__card-info">
+                  <div class="catalog__card-title">Платье</div>
+                  <div class="catalog__card-price">
+                    <div class="catalog__card-price-now">6 900 ₽</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__card">
+              <div class="catalog__card--wrap">
+                <div class="catalog__card-head"><a class="catalog__card-img--wrap" href="product-card.html"><img class="catalog__card-img" src="img/content/catalog/item_3.webp" width="435" height="611" alt="Название товара"></a>
+                  <div class="catalog__card-color--wrap">
+                    <div class="catalog__card-color" style="background-color:#DCAE8E"></div>
+                    <div class="catalog__card-color" style="background-color:#9EA0A0"></div>
+                    <div class="catalog__card-color" style="background-color:#6D7B60"></div>
+                  </div>
+                </div>
+                <div class="catalog__card-info">
+                  <div class="catalog__card-title">Пиджак</div>
+                  <div class="catalog__card-price">
+                    <div class="catalog__card-price-now">16 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__card">
+              <div class="catalog__card--wrap">
+                <div class="catalog__card-head"><a class="catalog__card-img--wrap" href="product-card.html"><img class="catalog__card-img" src="img/content/catalog/item_5.webp" width="435" height="611" alt="Название товара"></a>
+                  <div class="catalog__card-color--wrap">
+                    <div class="catalog__card-color" style="background-color:#DCAE8E"></div>
+                    <div class="catalog__card-color" style="background-color:#9EA0A0"></div>
+                    <div class="catalog__card-color" style="background-color:#6D7B60"></div>
+                  </div>
+                </div>
+                <div class="catalog__card-info">
+                  <div class="catalog__card-title">Блуза</div>
+                  <div class="catalog__card-price">
+                    <div class="catalog__card-price-now">5 500 ₽</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__row-before">
+            <div class="footer__nav">
+              <h3 class="footer__title">Документы</h3>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="privacy-policy.html">Политика конфиденциальности</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="offer.html">Оферта</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="requisites.html">Реквизиты</a></li>
+              </ul>
+            </div>
+            <div class="footer__nav">
+              <h3 class="footer__title">Покупателям</h3>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="catalog.html">Каталог</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="shipping-payment.html">Доставка и оплата</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="return.html">Возврат</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="about-us.html">О бренде</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="social footer__social hide-md-up"><a class="social__link" href="#inst" title="Go to Instagram">Instagram</a><a class="social__link" href="#fb" title="Go to Facebook">Facebook</a></div>
+          <div class="footer__subscribe">
+            <h3 class="footer__title">Подпишитесь на новости</h3>
+            <p class="footer__desc">Узнавайте первыми о скидках, предложениях и мероприятиях</p>
+            <form class="footer__subscribe-form">
+              <div class="input"> 
+                <input class="input__elem" type="text" name="footer-subscribe" placeholder="Введите вашу почту">
+              </div>
+              <button class="btn btn--reset btn--send" type="button" aria-label="Send form"></button>
+            </form>
+          </div>
+        </div>
+        <div class="footer__panel">
+          <p class="footer__copy">Made by <a href="#sick">sick</a></p>
+          <p class="footer__copy">Copyright © 2022 eterlique</p>
+          <div class="social footer__social hide-md-down"><a class="social__link" href="#inst" title="Go to Instagram">Instagram</a><a class="social__link" href="#fb" title="Go to Facebook">Facebook</a></div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal" id="table-sizes">
+      <div class="modal__item">
+        <div class="modal__item-header">
+          <div class="modal__item-header-title">Таблица размеров</div>
+          <button class="modal__close btn btn--reset btn--cross" data-close-modal></button>
+        </div>
+        <div class="modal__item-body">
+          <div class="table-sizes">
+            <table>
+              <thead>
+                <tr>
+                  <td>US</td>
+                  <td>RUS</td>
+                  <td>Рост</td>
+                  <td>Объём <br> груди</td>
+                  <td>Объём <br> бедер</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2XS</td>
+                  <td>40 - 42</td>
+                  <td> </td>
+                  <td> </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>XS</td>
+                  <td>42 - 44</td>
+                  <td> </td>
+                  <td> </td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>S</td>
+                  <td>44 - 46</td>
+                  <td>159 - 171</td>
+                  <td>88 - 96</td>
+                  <td>48</td>
+                </tr>
+                <tr>
+                  <td>M</td>
+                  <td>46 - 48</td>
+                  <td>172 - 177</td>
+                  <td>96 - 100</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>L</td>
+                  <td>48 - 50</td>
+                  <td>178 - 183</td>
+                  <td>100 - 104</td>
+                  <td>52</td>
+                </tr>
+                <tr>
+                  <td>XL</td>
+                  <td>50 - 52</td>
+                  <td>184 - 189</td>
+                  <td>104 - 108</td>
+                  <td>54</td>
+                </tr>
+                <tr>
+                  <td>2XL</td>
+                  <td>52 - 54</td>
+                  <td>190 - 195</td>
+                  <td>108 - 112</td>
+                  <td>56</td>
+                </tr>
+                <tr>
+                  <td>3XL</td>
+                  <td>54 - 56</td>
+                  <td>196 - 201</td>
+                  <td>112 - 116</td>
+                  <td>58</td>
+                </tr>
+                <tr>
+                  <td>4XL</td>
+                  <td>56 - 58</td>
+                  <td>202 - 207</td>
+                  <td>116 - 122</td>
+                  <td>60</td>
+                </tr>
+                <tr>
+                  <td>5XL</td>
+                  <td>58 - 60</td>
+                  <td>208 - 212</td>
+                  <td>122 - 126</td>
+                  <td>62</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="promo">
+      <div class="modal__square">
+        <button class="modal__close btn btn--reset btn--cross" data-close-modal></button>
+        <div class="modal__square-body">
+          <div class="modal__square-title">Будьте первыми в курсе закрытых распродаж, эксклюзивных акций и поступлений новинок</div><img class="modal__square-img" src="img/content/promo/promo-square-img.webp" width="220" height="294" alt="Promo">
+          <div class="modal__square-subscribe">
+            <form class="modal__square-subscribe-form" action="/" method="/">
+              <input class="input__elem" type="text" placeholder="Введите вашу почту">
+              <button class="btn btn--reset btn--send" type="button" aria-label="Send form"></button>
+            </form>
+            <div class="form__agree">Оставляя свою почту, я подтверждаю согласие с <a href="#">политикой конфиденциальности.</a></div>
+          </div>
+        </div>
+        <div class="modal__square-bg"></div>
+      </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/fancybox/fancybox.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

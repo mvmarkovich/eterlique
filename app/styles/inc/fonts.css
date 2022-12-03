@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Grato Classic';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/grato-classic/Grato Classic-Light-Web.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/grato-classic/Grato Classic-Light-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/grato-classic/Grato Classic-Light-Web.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/grato-classic/Grato Classic-Light-Web.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/grato-classic/Grato Classic-Light-Web.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Grato Classic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/grato-classic/Grato-Classic-Regular-Web.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/grato-classic/Grato Classic-Regular-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/grato-classic/Grato Classic-Regular-Web.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/grato-classic/Grato Classic-Regular-Web.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/grato-classic/Grato Classic-Regular-Web.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Grato Classic';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/grato-classic/Grato Classic-Medium-Web.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/grato-classic/Grato Classic-Medium-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/grato-classic/Grato Classic-Medium-Web.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/grato-classic/Grato Classic-Medium-Web.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/grato-classic/Grato Classic-Medium-Web.ttf') format('truetype'); /* Safari, Android, iOS */
+}

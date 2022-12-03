@@ -1,0 +1,91 @@
+.footer
+    margin: 100px 0 0 @lg 200px 0 0
+    padding: 0 0 16px @md 0 0 28px @lg 0 0 32px
+
+    &__row
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        flex-direction: column @md row
+
+        &-before
+            display: @lg flex
+            align-items: @lg flex-start
+            width: @md 50% @lg auto
+            order: @md-down 3
+
+    &__title
+        text: 500 11px 1.1 0.045em @lg 14px @xl 16px
+        letter-spacing: 0.045em
+        text-transform: uppercase
+        margin: 0 0 16px @lg 0 0 32px
+
+    &__panel
+        display: flex
+        flex-wrap: nowrap
+        justify-content: space-between
+        margin: 32px 0 0 @md 60px 0 0 @lg 90px 0 0
+
+    &__nav
+        margin: 0 0 32px @md 0 0 52px @lg 0 80px 0 0  @xl 0 160px 0 0
+
+        &-list
+            list-style: none
+            padding: 0
+            margin: 0
+
+        &-item
+            margin: 0 0 12px
+
+            &:last-child
+                margin: 0
+
+        &-link
+            text: #461510 400 10px 1 0.045em @lg 12px @xl 14px
+            text-transform: uppercase
+
+        &:last-child
+            margin: 0
+
+    &__subscribe
+        min-width: @lg 290px @xl 430px
+        width: 100% @md 49% @lg 33% @xl 430px
+        margin: 0 0 40px @md 0 0 0 auto
+        order: @md-down 1
+
+        &-form
+            position: relative
+
+        .input
+            margin: 24px 0 0
+
+        .btn--send
+            position: absolute
+            right: 0
+            top: 0
+
+            &:before
+                content: ''
+                background: resolve("icons/send.svg") no-repeat center right / 24px
+                size: 48px
+                min-width: 48px
+
+    &__copy
+        text: 500 10px 1.3 0.025em @lg 12px @xl 14px
+        margin: 0
+        padding: @md 0 24px 0 0
+
+        a
+            font-weight: 700
+            text-decoration: underline
+
+            &:hover
+                text-decoration: none
+
+    &__social
+        display: flex
+        align-items: center
+        min-width: @lg 290px @xl 430px
+        width: @lg 33% @xl 430px
+        order: @md-down 2 
+        margin: @md-down 0 0 52px

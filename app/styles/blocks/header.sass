@@ -1,0 +1,280 @@
+.header
+    position: relative
+    padding: 16px 0 @sm 32px 0 @xl 56px 0
+    z-index: 991
+    margin: 0 0 24px @sm 0 0 40px @xl 0 0 70px
+
+    &__row
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    &__logo
+        position: relative
+        width: 69px @sm 109px @lg 165px @xl 193px
+        min-width: 69px @sm 109px @lg 165px @xl 193px
+        height: 48px
+        display: inline-flex
+        align-items: center
+        z-index: 998
+
+    &__nav
+        margin: 0 @lg 0 0 0 -110px @xl 0 0 0 -200px
+
+        &-list
+            list-style: none
+            padding: 0
+            margin: 0
+
+            display: flex
+            align-items: center
+
+        &-item
+            position: relative
+            margin: @md 0 112px 0 0 @lg 0 152px 0 0 @xl 0 240px 0 0
+            display: none @md block
+
+            &--arrow
+                display: @md-down block
+                z-index: 997
+
+                ^^&-link
+                    z-index: 998
+                    transition: @md-down 0s
+
+                    &:after
+                        content: ''
+                        size: 24px
+                        min-width: 24px
+                        background: resolve("icons/chevron-down.svg") no-repeat center / 18px
+                        margin: 0 0 0 4px
+                        display: none @md inline-flex
+
+                &:hover
+                    ^^^&-child
+                        opacity: @md 1
+                        visibility: @md visible
+
+            &:last-child
+                margin: 0
+
+        &-link
+            position: relative
+            text: 400 10px 1.5 0.045em @lg 12px @xl 14px
+            text-transform: uppercase
+            min-height: 48px
+            display: inline-flex
+            align-items: center
+
+        &-child
+            position: fixed @md absolute
+            top: 0 @md -6px
+            left: 0 @md -20px
+            padding: 58px 20px 20px
+            background: #fff @md #FAF6F2
+            width: 100vw @md 212px
+            min-width: @md 212px
+            height: 100vh @md auto
+            transition: .2s ease-in-out
+            opacity: 0
+            visibility:  hidden
+            display: @md-down flex
+            align-items: @md-down center
+            justify-content: @md-down center
+            z-index: 991
+
+            &-list
+                list-style: none
+                padding: 0
+                margin: 0
+
+            &-item
+                margin: 0 0 20px
+                text-align: center @md left
+
+                &:nth-child(1)
+                    display: @md none
+
+                &:last-child
+                    margin: 0
+
+            &-link
+                text: #461510 400 14px 1.3 0.045em @md 10px @lg 12px @xl 14px
+                text-transform: uppercase
+
+    &__panel
+        position: relative
+        display: flex
+        align-items: center
+        height: 48px
+        z-index: 997
+
+        .btn--reset
+            min-height: 48px
+
+        .btn--search
+            display: @md-down none
+
+        .btn--cart
+            color: @md-down transparent
+            text-indent: @md-down -9999px
+            size: @md-down 48px
+            overflow: @md-down hidden
+
+            &:before
+                display: @md none
+                position: absolute
+                left: 0
+
+        > *
+            margin: @md 0 40px 0 0
+
+            &:last-child
+                margin: @md 0
+
+    &__search
+        position: relative
+        height: 48px
+
+        &-form
+            position: fixed @md absolute
+            right: 20px @md 0
+            top: @md 0
+            left: 20px @md auto
+            bottom: 24px @md auto
+            transition: .2s ease-in-out
+            opacity: 0
+            visibility: hidden
+            background: @md-down #fff
+
+            &.is-open
+                opacity: 1
+                visibility: visible
+
+            .input__elem
+                background: @md #FAF6F2 @xl transparent
+                min-width: @md 275px @lg 315px @xl 435px
+                padding: @md 0 0 0 16px @xl 0
+
+            .btn--search
+                position: absolute
+                top: 0
+                right: 0
+                display: @md-down inline-flex
+
+            .btn--reset-form
+                position: absolute
+                right: 48px
+                top: 0
+
+    &__cart
+        position: relative
+
+        &-popup
+            background: #FAF6F2
+            border: 0.5px solid rgba(70, 21, 16, 0.3)
+            position: absolute
+            top: 48px
+            right: 0
+            width: 500px
+            min-width: 500px
+            transition: .2s ease-in-out
+            opacity: 0
+            visibility: hidden
+
+        &-list
+            padding: 32px
+            max-height: 324px
+            overflow: auto
+
+        &-item
+            margin: 0 0 40px
+            display: flex
+            flex-wrap: nowrap
+
+            &-img
+                position: absolute 0 null null 0
+
+                &--wrap
+                    position: relative
+                    padding: 50% 0 0
+                    overflow: hidden
+                    margin: 0 20px 0 0
+                    min-width: 150px
+                    width: 150px
+
+            &-info
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+
+            &-title
+                text: 500 16px 1.3 0.045em
+                text-transform: uppercase
+                margin: 0 0 20px
+
+            &-price
+                text: 500 20px 1.5 0.04em
+                text-transform: uppercase
+
+            &-list
+                list-style: none
+                padding: 0
+                margin: 0
+
+                li
+                    margin: 0 0 12px
+
+                    &:last-child
+                        margin: 0
+
+                p, span
+                    text: 400 14px 1.3 0.045em
+                    display: inline-flex
+
+                p
+                    color: rgba(70, 21, 16, 0.6)
+                    margin: 0 4px 0 0
+
+            &:last-child
+                margin: 0
+
+        &-footer
+            border-top: 0.5px solid rgba(70, 21, 16, 0.3)
+            padding: 32px 32px 24px
+            text-align: center
+
+        &-total
+            text: 400 16px 1.3 0.02em
+            text-transform: uppercase
+            margin: 0 0 24px
+
+        &:hover 
+            ^&-popup
+                opacity: @md 1
+                visibility: @md visible
+
+.header--mobile-menu
+    .header__nav-child
+        opacity: @md-down 1
+        visibility: @md-down visible
+
+    .header__nav-item--arrow .header__nav-link
+        text-indent: @md-down -9999px
+        position: @md-down relative
+        color: @md-down transparent
+
+        &:before
+            content: 'Закрыть'
+            text-indent: @md-down 0
+            display: inline-flex @md none
+            color: @md-down #461510
+            position: @md-down absolute
+            left: @md-down 50%
+            transform: @md-down translateX(-50%)
+
+    .header__search-form
+        opacity: 1
+        visibility: visible
+
+        

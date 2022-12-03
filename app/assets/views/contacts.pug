@@ -1,0 +1,66 @@
+extends layouts/layout.pug
+
+block title
+    title Контакты | Eterlique
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__list-item
+                a.breadcrumbs__list-link(href="main.html") Главная
+
+            li.breadcrumbs__list-item.is--current
+                a.breadcrumbs__list-link(href="contacts.html") Контакты
+
+    .main-block
+        .contacts
+             .contacts__row
+                .contacts__info
+                    h1.contacts__title Мы всегда на связи по e-mail и в социальных сетях
+                    a.contacts__link(href="mailto:info@eterlique.ru") info@eterlique.ru
+
+                    .social
+                        a.social__link(href="#inst" title="Go to Instagram") Instagram
+                        a.social__link(href="#fb" title="Go to Facebook") Facebook
+
+                .contacts__img--wrap
+                    img.contacts__img(src="img/content/contacts/text-img.webp" width="887" height="638" alt="Контакты")
+
+
+        .feedback
+            h2.feedback__title Напишите нам
+            p.feedback__desc Не нашли то, что искали? Наши менеджеры свяжутся с вами в ближайшее время!
+
+            form.feedback__form(action="/" method="/")
+                .form__row
+                    .input.input-required
+                        input.input__elem(type="text" name="feedback-name" placeholder="Имя" required)
+
+                    .input.input-required
+                        input.input__elem(type="text" name="feedback-email" placeholder="Почта" required)
+
+                    .input
+                        input.input__elem(type="text" name="feedback-phone" placeholder="Телефон")
+
+                .input.input--textarea
+                    textarea.input__elem(name="feedback-message" cols="30" rows="1" placeholder="Комментарий")
+
+                .form__footer
+                    .input
+                        input.input__checkbox#feedback-agree(type="checkbox" name="feedback-agree")
+                        label.input__checkbox-label(for="feedback-agree") Я ознакомился и принимаю условия <a href="#">Политики конфиденциальности</a>
+
+                    button.btn.btn--border.form__send(type="submit" aria-label="Send form") Отправить
+
+                    
+
+
+
+
+
+
+
+                
+                
+
+        

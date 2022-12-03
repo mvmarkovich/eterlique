@@ -1,0 +1,98 @@
+extends layouts/layout.pug
+
+block title
+    title Главная | Eterlique
+
+block content
+    .main-block
+        .intro
+            .intro__wrap
+                .intro__col(style="background-image:url(img/content/intro/intro.webp)")
+
+        .about-short
+            .about-short__row
+                .about-short__info
+                    h2 Eterlique — актуальный урбанистический взгляд на женственность.
+                    p Наша цель – создавать одежду, которая бы отвечала запросам женщины, транслирующей современный урбанистический образ жизни.
+
+                    a.btn.btn--reset.btn--arrow-right(href="about-us.html") Узнайте больше о нас
+
+                .about-short__imgs--wrap
+                    img.about-short__imgs-huge(src="img/content/about-short/img-huge.webp" width="889" height="1218" alt="Title img huge")
+                    img.about-short__imgs-tiny(src="img/content/about-short/img-tiny.webp" width="319" height="492" alt="Title img tiny")
+
+        .categories
+            h2 Наш каталог
+
+            .categories__list
+                .categories__card
+                    a.categories__card-body(href="catalog.html")
+                        .categories__card-img--wrap
+                            img.categories__card-img(src="img/content/categories/item_1.webp" width="435" height="589" alt="Новинки")
+
+                        .categories__card-info
+                            .categories__card-title Новинки
+                            .categories__card-count 13
+
+                .categories__card
+                    a.categories__card-body(href="catalog.html")
+                        .categories__card-img--wrap
+                            img.categories__card-img(src="img/content/categories/item_2.webp" width="435" height="589" alt="Верхняя одежда")
+
+                        .categories__card-info
+                            .categories__card-title Верхняя одежда
+                            .categories__card-count 10
+
+                .categories__card
+                    a.categories__card-body(href="catalog.html")
+                        .categories__card-img--wrap
+                            img.categories__card-img(src="img/content/categories/item_3.webp" width="435" height="589" alt="Пиджаки")
+
+                        .categories__card-info
+                            .categories__card-title Пиджаки
+                            .categories__card-count 15
+
+                .categories__card
+                    a.categories__card-body(href="catalog.html")
+                        .categories__card-img--wrap
+                            img.categories__card-img(src="img/content/categories/item_4.webp" width="435" height="589" alt="Рубашки и блузки")
+
+                        .categories__card-info
+                            .categories__card-title Рубашки и блузки
+                            .categories__card-count 25
+
+                .categories__card
+                    a.categories__card-body(href="catalog.html")
+                        .categories__card-img--wrap
+                            img.categories__card-img(src="img/content/categories/item_5.webp" width="435" height="589" alt="Топы")
+
+                        .categories__card-info
+                            .categories__card-title Топы
+                            .categories__card-count 5
+
+                .categories__card
+                    a.categories__card-body(href="catalog.html")
+                        .categories__card-img--wrap
+                            img.categories__card-img(src="img/content/categories/item_6.webp" width="435" height="589" alt="Платья и сарафаны")
+
+                        .categories__card-info
+                            .categories__card-title Платья и сарафаны
+                            .categories__card-count 19
+
+                .categories__card
+                    a.categories__card-body(href="catalog.html")
+                        .categories__card-img--wrap
+                            img.categories__card-img(src="img/content/categories/item_7.webp" width="435" height="589" alt="")
+
+                        .categories__card-info
+                            .categories__card-title Юбки
+                            .categories__card-count 10
+
+                .categories__card
+                    a.categories__card-body(href="catalog.html")
+                        .categories__card-img--wrap
+                            img.categories__card-img(src="img/content/categories/item_8.webp" width="435" height="589" alt="")
+
+                        .categories__card-info
+                            .categories__card-title Брюки и шорты
+                            .categories__card-count 25

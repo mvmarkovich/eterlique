@@ -1,0 +1,368 @@
+extends layouts/layout.pug
+
+block title
+    title Каталог | Eterlique
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__list-item
+                a.breadcrumbs__list-link(href="main.html") Главная
+
+            li.breadcrumbs__list-item.is--current
+                a.breadcrumbs__list-link(href="catalog.html") Каталог
+
+    .main-aside-container
+        .aside.aside--filter 
+            .filter
+                .filter__categories
+                    ul.filter__categories-list
+                        li.filter__categories-item
+                            a.filter__categories-link(href="catalog.html") Все
+                            span.filter__categories-count 70
+
+                        li.filter__categories-item
+                            a.filter__categories-link(href="catalog.html") Новинки
+                            span.filter__categories-count 12
+
+                        li.filter__categories-item
+                            a.filter__categories-link(href="catalog.html") Верхняя одежда
+                            span.filter__categories-count 12
+
+                        li.filter__categories-item
+                            a.filter__categories-link(href="catalog.html") Пиджаки
+                            span.filter__categories-count 6
+
+                        li.filter__categories-item
+                            a.filter__categories-link(href="catalog.html") Брюки и шорты
+                            span.filter__categories-count 4
+
+                        li.filter__categories-item
+                            a.filter__categories-link(href="catalog.html") Платья и сарафаны
+                            span.filter__categories-count 6
+
+                        li.filter__categories-item
+                            a.filter__categories-link(href="catalog.html") Юбки
+                            span.filter__categories-count 8
+
+                        li.filter__categories-item
+                            a.filter__categories-link(href="catalog.html") Топы
+                            span.filter__categories-count 5
+
+                        li.filter__categories-item
+                            a.filter__categories-link(href="catalog.html") Sale
+                            span.filter__categories-count 10
+
+                .filter__body
+                    .accordion.filter__accordion
+                        .accordion__item
+                            button.btn.btn--reset.accordion__item-toggle(aria-label="Toggle accordion") Размер
+                            .accordion__item-body  
+                                .accordion__item-body-pad
+                                    .filter__sizes
+                                        ul.filter__sizes-list
+                                            li.filter__sizes-item
+                                                a.filter__sizes-link(href="catalog.html") 40
+
+                                            li.filter__sizes-item
+                                                a.filter__sizes-link(href="catalog.html") 42
+
+                                            li.filter__sizes-item
+                                                a.filter__sizes-link(href="catalog.html") 44
+
+                                            li.filter__sizes-item
+                                                a.filter__sizes-link(href="catalog.html") 46
+
+
+                        .accordion__item
+                            button.btn.btn--reset.accordion__item-toggle(aria-label="Toggle accordion") Цена
+                            .accordion__item-body
+                                .accordion__item-body-pad
+                                    .filter__price
+                                        <!-- START INPUT RANGE -->
+                                        .input
+                                            .input--range-body
+                                                input.input__range#input-range-left(type="range" min="4500" max="17000" value="4500")
+                                                input.input__range#input-range-right(type="range" min="4500" max="17000" value="17000")
+
+                                                .input__range-label
+                                                    .input__range-track
+                                                    .input__range-slide
+
+                                                    .input__range-thumb.input__range-thumb-left
+                                                        .input__range-output#range-output-min
+
+                                                    .input__range-thumb.input__range-thumb-right
+                                                        .input__range-output#range-output-max
+                                        <!-- END INPUT RANGE -->
+
+                        .accordion__item
+                            button.btn.btn--reset.accordion__item-toggle(aria-label="Toggle accordion") Цвет
+                            .accordion__item-body
+                                .accordion__item-body-pad
+                                    .filter__colors
+                                        .filter__colors-row
+                                            .input
+                                                input.input__color#filter-color-1(type="checkbox" name="filter-color-1")
+                                                label.input__color-label(for="filter-color-1" style="background-color:#DCAE8E")
+
+                                            .input
+                                                input.input__color#filter-color-2(type="checkbox" name="filter-color-2")
+                                                label.input__color-label(for="filter-color-2" style="background-color:#FFF6DE")
+
+                                            .input
+                                                input.input__color#filter-color-3(type="checkbox" name="filter-color-3")
+                                                label.input__color-label(for="filter-color-3" style="background-color:#6D7B60")
+
+                                            .input
+                                                input.input__color#filter-color-4(type="checkbox" name="filter-color-4")
+                                                label.input__color-label(for="filter-color-4" style="background-color:#9F6944")
+
+                                            .input
+                                                input.input__color#filter-color-5(type="checkbox" name="filter-color-5")
+                                                label.input__color-label(for="filter-color-5" style="background-color:#85786C")
+
+                                            .input
+                                                input.input__color#filter-color-6(type="checkbox" name="filter-color-6")
+                                                label.input__color-label(for="filter-color-6" style="background-color:#F1E8CB")
+
+                                            .input
+                                                input.input__color#filter-color-7(type="checkbox" name="filter-color-7")
+                                                label.input__color-label(for="filter-color-7" style="background-color:#F1E8CB")
+
+                                            .input
+                                                input.input__color#filter-color-8(type="checkbox" name="filter-color-8")
+                                                label.input__color-label(for="filter-color-8" style="background-color:#DBDDB2")
+
+                                            .input
+                                                input.input__color#filter-color-9(type="checkbox" name="filter-color-9")
+                                                label.input__color-label(for="filter-color-9" style="background-color:#313127")
+
+                                            .input
+                                                input.input__color#filter-color-10(type="checkbox" name="filter-color-10")
+                                                label.input__color-label(for="filter-color-10" style="background-color:#EDEDED")
+
+                                            .input
+                                                input.input__color#filter-color-11(type="checkbox" name="filter-color-11")
+                                                label.input__color-label(for="filter-color-11" style="background-color:#fff")
+
+                    .filter__nav
+                        button.btn.btn--border(aria-label="Send form") Показать результаты
+                        a.btn.btn--reset(href="#") Очистить фильтры
+
+        .main-block
+            .catalog
+                .catalog__header
+                    .btns-spacer
+                        button.btn.btn--reset.btn--categories(aria-label="Open categories") Категории
+                        button.btn.btn--reset.btn--filter(aria-label="Open filter") Фильтры
+
+                .catalog__row
+                    .catalog__card
+                        .catalog__card--wrap
+                            .catalog__card-head
+                                a.catalog__card-img--wrap(href="product-card.html")
+                                    img.catalog__card-img(src="img/content/catalog/item_1.webp" width="435" height="611" alt="Название товара")
+
+                                .catalog__card-color--wrap
+                                    .catalog__card-color(style="background-color:#DCAE8E")
+                                    .catalog__card-color(style="background-color:#9EA0A0")
+                                    .catalog__card-color(style="background-color:#6D7B60")
+
+                            .catalog__card-info
+                                .catalog__card-title Плащ
+
+                                .catalog__card-price
+                                    .catalog__card-price-now 17 000 ₽
+
+                    .catalog__card
+                        .catalog__card--wrap
+                            .catalog__card-head
+                                a.catalog__card-img--wrap(href="product-card.html")
+                                    img.catalog__card-img(src="img/content/catalog/item_2.webp" width="435" height="611" alt="Название товара")
+
+                                .catalog__card-color--wrap
+                                    .catalog__card-color(style="background-color:#DCAE8E")
+                                    .catalog__card-color(style="background-color:#9EA0A0")
+                                    .catalog__card-color(style="background-color:#6D7B60")
+
+                            .catalog__card-info
+                                .catalog__card-title Платье
+
+                                .catalog__card-price
+                                    .catalog__card-price-now 6 900 ₽
+                                    .catalog__card-price-old 17 000 ₽
+
+                    .catalog__card
+                        .catalog__card--wrap
+                            .catalog__card-head
+                                a.catalog__card-img--wrap(href="product-card.html")
+                                    img.catalog__card-img(src="img/content/catalog/item_3.webp" width="435" height="611" alt="Название товара")
+
+                                .catalog__card-color--wrap
+                                    .catalog__card-color(style="background-color:#232321")
+                                    .catalog__card-color(style="background-color:#DCD4CF")
+                                    .catalog__card-color(style="background-color:#9F6944")
+                                    .catalog__card-color(style="background-color:#DCAE8E")
+                                    .catalog__card-color(style="background-color:#9EA0A0")
+                                    .catalog__card-color(style="background-color:#6D7B60")
+
+                            .catalog__card-info
+                                .catalog__card-title Пиджак
+
+                                .catalog__card-price
+                                    .catalog__card-price-now 16 000 ₽
+
+                    .catalog__card
+                        .catalog__card--wrap
+                            .catalog__card-head
+                                a.catalog__card-img--wrap(href="product-card.html")
+                                    img.catalog__card-img(src="img/content/catalog/item_4.webp" width="435" height="611" alt="Название товара")
+
+                                .catalog__card-color--wrap
+                                    .catalog__card-color(style="background-color:#DCAE8E")
+                                    .catalog__card-color(style="background-color:#9EA0A0")
+                                    .catalog__card-color(style="background-color:#6D7B60")
+
+                            .catalog__card-info
+                                .catalog__card-title Плащ
+
+                                .catalog__card-price
+                                    .catalog__card-price-now 17 000 ₽
+
+                    .catalog__card
+                        .catalog__card--wrap
+                            .catalog__card-head
+                                a.catalog__card-img--wrap(href="product-card.html")
+                                    img.catalog__card-img(src="img/content/catalog/item_5.webp" width="435" height="611" alt="Название товара")
+
+                                .catalog__card-color--wrap
+                                    .catalog__card-color(style="background-color:#DCAE8E")
+                                    .catalog__card-color(style="background-color:#9EA0A0")
+                                    .catalog__card-color(style="background-color:#6D7B60")
+
+                            .catalog__card-info
+                                .catalog__card-title Блуза
+
+                                .catalog__card-price
+                                    .catalog__card-price-now 5 500 ₽
+
+                    .catalog__card
+                        .catalog__card--wrap
+                            .catalog__card-head
+                                a.catalog__card-img--wrap(href="product-card.html")
+                                    img.catalog__card-img(src="img/content/catalog/item_6.webp" width="435" height="611" alt="Название товара")
+
+                                .catalog__card-color--wrap
+                                    .catalog__card-color(style="background-color:#DCAE8E")
+                                    .catalog__card-color(style="background-color:#9EA0A0")
+                                    .catalog__card-color(style="background-color:#6D7B60")
+
+                            .catalog__card-info
+                                .catalog__card-title Платье
+
+                                .catalog__card-price
+                                    .catalog__card-price-now 6 900 ₽
+
+                    .catalog__card
+                        .catalog__card--wrap
+                            .catalog__card-head
+                                a.catalog__card-img--wrap(href="product-card.html")
+                                    img.catalog__card-img(src="img/content/catalog/item_7.webp" width="435" height="611" alt="Название товара")
+
+                                .catalog__card-color--wrap
+                                    .catalog__card-color(style="background-color:#DCAE8E")
+                                    .catalog__card-color(style="background-color:#9EA0A0")
+                                    .catalog__card-color(style="background-color:#6D7B60")
+
+                            .catalog__card-info
+                                .catalog__card-title Брюки
+
+                                .catalog__card-price
+                                    .catalog__card-price-now 6 200 ₽
+
+                    .catalog__card
+                        .catalog__card--wrap
+                            .catalog__card-head
+                                a.catalog__card-img--wrap(href="product-card.html")
+                                    img.catalog__card-img(src="img/content/catalog/item_8.webp" width="435" height="611" alt="Название товара")
+
+                                .catalog__card-color--wrap
+                                    .catalog__card-color(style="background-color:#DCAE8E")
+                                    .catalog__card-color(style="background-color:#9EA0A0")
+                                    .catalog__card-color(style="background-color:#6D7B60")
+
+                            .catalog__card-info
+                                .catalog__card-title Топ
+
+                                .catalog__card-price
+                                    .catalog__card-price-now 4 500 ₽
+
+                    .catalog__card
+                        .catalog__card--wrap
+                            .catalog__card-head
+                                a.catalog__card-img--wrap(href="product-card.html")
+                                    img.catalog__card-img(src="img/content/catalog/item_9.webp" width="435" height="611" alt="Название товара")
+
+                                .catalog__card-color--wrap
+                                    .catalog__card-color(style="background-color:#DCAE8E")
+                                    .catalog__card-color(style="background-color:#9EA0A0")
+                                    .catalog__card-color(style="background-color:#6D7B60")
+
+                            .catalog__card-info
+                                .catalog__card-title Плащ
+
+                                .catalog__card-price
+                                    .catalog__card-price-now 17 000 ₽
+
+                .btn--block
+                    button.btn.btn--border(aria-label="Load more") Показать больше
+
+block script
+    script(type="text/javascript").
+        /* Input Range */
+
+        var inputLeft = document.getElementById("input-range-left");
+        var inputRight = document.getElementById("input-range-right");
+        var outputMin = document.getElementById("range-output-min");
+        var outputMax = document.getElementById("range-output-max");
+
+        var thumbLeft = document.querySelector(".input__range-label > .input__range-thumb-left");
+        var thumbRight = document.querySelector(" .input__range-label > .input__range-thumb-right");
+        var range = document.querySelector(".input__range-label > .input__range-slide");
+
+        function setLeftValue() {
+            var _this = inputLeft,
+                min = parseInt(_this.min),
+                max = parseInt(_this.max);
+
+            _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
+
+            var percent = ((_this.value - min) / (max - min)) * 100;
+
+            thumbLeft.style.left = percent + "%";
+            range.style.left = percent + "%";
+
+            outputMin.innerHTML = _this.value;
+        }
+
+        function setRightValue() {
+            var _this = inputRight,
+                min = parseInt(_this.min),
+                max = parseInt(_this.max);
+
+            _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+
+            var percent = ((_this.value - min) / (max - min)) * 100;
+
+            thumbRight.style.right = (100 - percent) + "%";
+            range.style.right = (100 - percent) + "%";
+
+            outputMax.innerHTML = _this.value;
+        }
+
+        setLeftValue();
+        setRightValue();
+
+        inputLeft.addEventListener("input", setLeftValue);
+        inputRight.addEventListener("input", setRightValue);

@@ -1,0 +1,179 @@
+.modal
+  position: fixed 0 0 0 0
+  background: $cover-color
+  justify-content: center
+  z-index: 99990
+  display: none
+  overflow: auto
+  opacity: 0
+  transition: .3s ease
+  padding: 0 8px
+
+  &--tiny
+    ^&__square
+      max-width: 500px
+
+  &--open
+    display: flex
+    align-items: center
+
+  &--fadeIn
+    opacity: 1
+
+    ^&__item, ^&__square
+      transform: translateY(0) scale(1)
+
+    ^&__square-img
+      transform: translateY(0) scale(1)
+      transition-delay: 0s
+
+  &__item, &__square
+    transform: translateY(-10px) scale(.98)
+    transition: .3s ease
+    background: #FAF6F2
+    border: 0.5px solid rgba(70, 21, 16, 0.3)
+
+  &__close
+    top: 0 @md 16px
+    right: 0 @md 16px
+    position: absolute
+
+  &__item
+    position: relative
+    size: 100% auto
+    max-width: 640px @md 730px @lg 840px
+    margin: auto
+
+    &-body
+      padding: 8px 20px 20px @md 20px 52px 52px
+
+    &-header
+      padding: 16px 20px 0 @md 32px 52px 0 @xl 42px 52px 0
+      margin: 0 0 10px
+
+      &-title
+        text: 400 11px 1.3 0.045em @md 18px @lg 22px @xl 24px
+        text-transform: uppercase
+        text-align: left @md center
+
+    &-img
+      position: absolute
+      top: 0
+      left: 0
+
+      &--wrap
+        position: relative
+        overflow: hidden
+        border-radius: 10px
+        padding: 50% 0 0
+
+  &__square
+    display: flex
+    align-items: center
+    size: 100% auto @md 753px 573px @lg 820px 671px
+    max-width: 364px @md 100%
+
+    &-body
+      width: 100% @md 50%
+      padding: 64px 48px 40px @md 52px 48px 58px
+
+    &-title
+      text: 400 12px 1.3 0.02em 14px @lg 16px @xl 18px
+      margin: 0 0 24px @md 0 0 36px @xl 0 0 48px
+      text-align: center
+
+    &-img
+      max-width: 220px
+      width: 100%
+      margin: 24px auto 32px @md 36px auto 28px @xl 48px auto 40px
+
+    &-subscribe
+      max-width: 274px
+      margin: 0 auto
+      
+      &-form
+        position: relative
+
+        .input__elem
+          background: #FAF6F2
+
+        .btn--send
+          position: absolute
+          right: 0
+          top: 0
+
+          &:before
+            content: ''
+            background: resolve("icons/send.svg") no-repeat center right / 24px
+            size: 48px
+            min-width: 48px
+  
+    &-bg
+      background: resolve("content/promo/promo-square-bg.webp") no-repeat center / cover
+      size: 50% 100%
+      display: none @md block
+
+.fancybox__container
+  padding: 0 20px
+
+.fancybox__carousel .fancybox__slide.has-video .fancybox__content
+  border-radius: 24px
+  overflow: hidden
+
+.fancybox__button--close
+  position: relative
+  right: 20px
+  size: auto 48px
+  display: inline-flex
+  align-items: center
+
+  svg
+    display: none
+
+  &::before
+    content: 'Закрыть'
+    text: #461510 400 10px @lg 12px @xl 14px
+    text-transform: uppercase
+
+.fancybox__backdrop
+  background: #fff
+
+.fancybox__toolbar
+  background: #fff
+
+.fancybox__button--zoom
+  display: none
+
+.fancybox__button--fullscreen
+  display: none
+
+.fancybox__thumbs
+  bottom: 5%
+
+.fancybox__thumbs .carousel__slide 
+  size: 12px 2px
+  background: rgba(70, 21, 16, 0.6)
+  opacity: .3
+  transition: .2s
+  border-radius: 0
+  padding: 0
+  margin: 0 4px
+
+  &.is-nav-selected
+    opacity: 1
+    width: 30px
+
+  > *
+    display: none
+
+.fancybox__toolbar__items--left
+  display: none
+
+.fancybox__button--slideshow
+  display: none
+
+.fancybox__button--thumbs
+  display: none
+
+.fancybox__nav .carousel__button
+  display: none

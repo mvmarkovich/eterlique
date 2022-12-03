@@ -1,0 +1,94 @@
+header.header
+    .container.header__container
+        .header__row
+            a.header__logo(href="main.html")
+                img.header__logo-img(src="img/icons/logo.svg" width="165" height="41" alt="Eterlique")
+
+            nav.header__nav
+                ul.header__nav-list
+                    li.header__nav-item.header__nav-item--arrow
+                        a.header__nav-link(aria-label="Dropmenu") Меню 
+
+                        .header__nav-child
+                            ul.header__nav-child-list
+                                li.header__nav-child-item
+                                    a.header__nav-child-link(href="catalog.html") Каталог
+
+                                li.header__nav-child-item
+                                    a.header__nav-child-link(href="shipping-payment.html") Доставка и оплата
+
+                                li.header__nav-child-item
+                                    a.header__nav-child-link(href="return.html") Возврат
+
+                                li.header__nav-child-item
+                                    a.header__nav-child-link(href="about-us.html") О бренде
+
+                                li.header__nav-child-item
+                                    a.header__nav-child-link(href="contacts.html") Контакты
+
+                    li.header__nav-item
+                        a.header__nav-link(href="catalog.html") Каталог
+
+            .header__panel
+                .header__search
+                    button.btn.btn--reset.btn--search.header__search-btn(aria-label="search")
+
+                    form.header__search-form(action="/" method="/")
+                        input.input__elem(type="text" placeholder="Поиск")
+
+                        button.btn.btn--reset.btn--reset-form(aria-label="Remove value form")
+                        button.btn.btn--reset.btn--search(type="button" aria-label="Send form")
+
+                .header__cart
+                    a.btn.btn--reset.btn--cart(href="basket.html") Корзина (2)
+
+                    .header__cart-popup
+                        .header__cart-list
+                            .header__cart-item
+                                .header__cart-item-img--wrap
+                                    img.header__cart-item-img(src="img/content/header-cart/item_1.webp" width="153" height="218" alt="Плащ")
+
+                                .header__cart-item-info
+                                    .header__cart-item-head
+                                        .header__cart-item-title Плащ
+                                        .header__cart-item-price 5 500 ₽
+
+                                    .header__cart-item-body
+                                        ul.header__cart-item-list
+                                            li 
+                                                p Размер: 
+                                                span S
+
+                                            li 
+                                                p Цвет: 
+                                                span серый
+
+                            .header__cart-item
+                                .header__cart-item-img--wrap
+                                    img.header__cart-item-img(src="img/content/header-cart/item_2.webp" width="153" height="218" alt="Брюки со стрелками")
+
+                                .header__cart-item-info
+                                    .header__cart-item-head
+                                        .header__cart-item-title Брюки со стрелками
+                                        .header__cart-item-price 17 000 ₽
+
+                                    .header__cart-item-body
+                                        ul.header__cart-item-list
+                                            li 
+                                                p Размер: 
+                                                span M
+
+                                            li 
+                                                p Цвет:
+                                                span бежевый
+
+                        .header__cart-footer
+                            .header__cart-total Сумма: 22 500 ₽
+
+                            .btn--block
+                                a.btn.btn--border.btn--full(href="basket.html") Оформить заказ
+
+
+                    
+
+            

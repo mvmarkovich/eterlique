@@ -1,0 +1,103 @@
+.basket
+    &__row
+        display: @md flex
+        align-items: @md flex-start
+        justify-content: space-between
+
+    &__table
+        width: 100% @md 70% @lg 60%
+
+        &-row
+            position: relative
+            display: flex
+            flex-wrap: wrap @md nowrap
+            margin: 0 0 32px @md 0 0 40px @lg 0 0 60px
+
+            &:last-child
+                margin: 0
+
+        &-col
+            &-img
+                position: absolute 0 null null 0
+                object-fit: cover
+                height: 100%
+
+                &--wrap
+                    position: relative
+                    padding: 140% 0 0
+                    height: 100%
+                    overflow: hidden
+
+            &-title
+                text: 400 14px 1.6 @md 16px @lg 18px @xl 20px
+                margin: 0 0 10px @md 0 0 24px
+
+            &-list
+                list-style: none
+                padding: 0
+                margin: 0
+
+                li
+                    text: #461510 400 14px 1.3 .045em
+                    margin: 0 0 6px @md 0 0 12px @lg 0 0 16px @xl 0 0 20px
+
+                    &:last-child
+                        margin: 0
+
+            &-nav
+                padding: @md 10px 0 0
+                display: flex @md block
+                align-items: flex-end
+                justify-content: space-between
+                position: @md-down absolute
+                right: @md-down 0
+                bottom: @md-down 0
+                left: @md-down 136px
+
+            &-code
+                text: rgba(70, 21, 16, .6) 400 10px 1.3 @lg 12px
+                margin: 12px 0 0
+                display: none @md inline-block
+
+            &-price
+                text: 500 12px 1.1 0.045em @lg 14px @xl 16px
+                margin: 10px 0 20px @md 0 0 32px @lg 0 0 70px
+
+            &-info
+                display: @md flex
+                flex-direction: @md column
+                justify-content: @md space-between
+                height: @md 100%
+                padding: @md-down 0 0 52px
+
+            &--remove
+                text: 400 12px 1.3 @md 14px @xl 16px
+                text-transform: lowercase
+                margin: 0 0 0 20px @md 20px 0
+
+            &:nth-child(1)
+                width: 120px @md 26%
+                min-width: 120px
+                margin: 0 16px 0 0 @lg 0 20px 0 0
+
+            &:nth-child(2)
+                width: calc(100% - 120px - 16px) @md calc(100% - 26% - 120px) @lg calc(100% - 26% - 144px) @xl calc(100% - 26% - 174px)
+                padding: @md 0 32px 0 0
+
+            &:nth-child(3)
+                width: @md 120px @lg 144px @xl 174px
+                min-width: @md 120px @lg 144px @xl 174px
+
+    &__aside
+        width: 100% @md 24%
+        padding: 16px 0 @md 0
+        margin: @md-down 84px 0 0
+
+        &-total
+            text: 500 12px 1.1 0.045em @lg 14px @xl 16px
+            text-transform: uppercase
+            margin: 0 0 16px @md 0 0 24px @lg 0 0 30px
+            text-align: center @md left
+
+        .btn--block
+            margin: 16px 0 0 @md 24px 0 0 @lg 30px 0 0

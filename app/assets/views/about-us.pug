@@ -1,0 +1,49 @@
+extends layouts/layout.pug
+
+block title
+    title О нас | Eterlique
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__list-item
+                a.breadcrumbs__list-link(href="main.html") Главная
+
+            li.breadcrumbs__list-item.is--current
+                a.breadcrumbs__list-link(href="about-us.html") О компании
+
+    .main-block
+        .about-us
+            .about-us__head
+                .about-us__head-col
+                    h1.about-us__title Eterlique — европейский бренд женской одежды, основанный в 2020 году, в Москве, молодой компанией специалистов и энтузиастов.
+                .about-us__head-col
+                    p.about-us__desc Наша цель — создавать одежду, которая бы отвечала запросам человека, транслирующего современный урбанистический образ жизни.
+
+            .about-us__gallery
+                .about-us__gallery-list
+                    .about-us__gallery-item
+                        .about-us__gallery-img--wrap
+                            img.about-us__gallery-img(src="img/content/about-us/gallery_1.webp" width="435" height="641" alt="Title img")
+
+                    .about-us__gallery-item
+                        .about-us__gallery-img--wrap
+                            img.about-us__gallery-img(src="img/content/about-us/gallery_2.webp" width="435" height="641" alt="Title img")
+
+                    .about-us__gallery-item
+                        .about-us__gallery-img--wrap
+                            img.about-us__gallery-img(src="img/content/about-us/gallery_3.webp" width="435" height="641" alt="Title img")
+
+                    .about-us__gallery-item
+                        .about-us__gallery-img--wrap
+                            img.about-us__gallery-img(src="img/content/about-us/gallery_4.webp" width="435" height="641" alt="Title img")
+
+            .about-short.about-short--reverse
+                .about-short__row
+                    .about-short__info
+                        p Мы уделяем особое внимание качеству тканей и конструированию моделей, чтобы каждая наша вещь стала для вас особенной, а также стараемся выстроить производство согласно актуальной повестке, утверджающей осознанное потребление.
+                        p Команда Eterlique считает, что одежда — это один из способов проявления заботы и внимания к своим желаниям. Поэтому мы выбираем язык любви — к себе!
+
+                    .about-short__imgs--wrap
+                        img.about-short__imgs-huge(src="img/content/about-us/about-short-img-huge.webp" width="889" height="1218" alt="Title img huge")
+                        img.about-short__imgs-tiny(src="img/content/about-us/about-short-img-tiny.webp" width="319" height="492" alt="Title img tiny")

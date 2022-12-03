@@ -1,0 +1,31 @@
+.container
+  max-width: $container-xl-px
+  margin: * auto
+  padding: 0 20px @sm 0 40px @lg 0 60px
+
+@media $md
+  .container
+    max-width: $container-xl-px
+
+@media $lg
+  .container
+    max-width: $container-xl-px
+
+@media $xl
+  .container
+    max-width: $container-xl-px
+
+.main-aside-container
+  display: @md flex
+  flex-wrap: @md nowrap
+
+  .main-block
+    width: 100% @lg 74%
+
+.main-block
+  width: 100%
+
+.aside
+  width: 100% @md 158px @lg 17%
+  min-width: @md 100% 158px @lg 1px
+  margin: @md 0 20px 0 0 @lg 0 9% 0 0
