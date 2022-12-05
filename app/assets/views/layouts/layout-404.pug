@@ -1,0 +1,26 @@
+include ../inc/var.pug
+
+doctype html
+html(lang="ru" dir="ltr")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    link(rel="apple-touch-icon", sizes="180x180", href="img/favicon/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="img/favicon/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
+    meta(name="msapplication-TileColor", content="#000")
+    meta(name="msapplication-config", content="img/favicon/browserconfig.xml")
+    meta(name="theme-color", content="#000")
+    block title
+
+    block head
+      link(href="styles/main.css" rel="stylesheet")
+
+  body
+    include ../inc/header.pug
+
+    .page-container.container
+      block content
+    
+    block script
+

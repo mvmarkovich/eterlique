@@ -9,7 +9,7 @@
     <meta name="msapplication-TileColor" content="#000">
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#000">
-    <title>Карточка товара | Eterlique</title>
+    <title>Карточка товара добавлено | Eterlique</title>
     <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="libs/fancybox/fancybox.min.css">
     <link href="styles/main.css" rel="stylesheet">
@@ -96,6 +96,9 @@
       </div>
     </header>
     <div class="page-container container">
+      <div class="product-add-panel">
+        <h5>Товар добавлен в корзину</h5>
+      </div>
       <div class="breadcrumbs">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="main.html">Главная</a></li>
@@ -177,8 +180,8 @@
                 </div>
                 <button class="btn btn--reset product-card__info-link" aria-label="Modal sizes">Таблица размеров</button>
               </div>
-              <div class="btn--block product-card__buy"><a class="btn btn--border" href="#">Добавить в корзину</a>
-                <div class="input input--number input--number-bg hide"><span class="input__number-down">-</span>
+              <div class="btn--block product-card__buy"><a class="btn btn--border hide" href="#">Добавить в корзину</a>
+                <div class="input input--number input--number-bg"><span class="input__number-down">-</span>
                   <div class="input__number-desc">в корзине
                     <input class="input__number" type="number" min="1" max="30" value="1" name="product-qty" disabled>шт
                   </div><span class="input__number-up">+</span>

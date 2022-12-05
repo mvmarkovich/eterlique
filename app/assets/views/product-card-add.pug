@@ -1,9 +1,12 @@
 extends layouts/layout.pug
 
 block title
-    title Карточка товара | Eterlique
+    title Карточка товара добавлено | Eterlique
 
 block content
+    .product-add-panel
+        h5 Товар добавлен в корзину
+
     .breadcrumbs
         ul.breadcrumbs__list
             li.breadcrumbs__list-item
@@ -104,9 +107,9 @@ block content
                         button.btn.btn--reset.product-card__info-link(aria-label="Modal sizes") Таблица размеров
 
                     .btn--block.product-card__buy
-                        a.btn.btn--border(href="#") Добавить в корзину
-
-                        .input.input--number.input--number-bg.hide
+                        a.btn.btn--border.hide(href="#") Добавить в корзину
+                        
+                        .input.input--number.input--number-bg
                             span.input__number-down -
                             .input__number-desc
                                 | в корзине
