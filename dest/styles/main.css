@@ -1369,7 +1369,7 @@ select.input__elem option[disabled] {
 }
 
 .header__cart-list {
-  padding: 32px;
+  padding: 24px;
   max-height: 324px;
   overflow: auto;
 }
@@ -1388,11 +1388,11 @@ select.input__elem option[disabled] {
 
 .header__cart-item-img--wrap {
   position: relative;
-  padding: 50% 0 0;
+  padding: 33% 0 0;
   overflow: hidden;
   margin: 0 20px 0 0;
-  min-width: 150px;
-  width: 150px;
+  min-width: 100px;
+  width: 100px;
 }
 
 .header__cart-item-info {
@@ -1403,16 +1403,16 @@ select.input__elem option[disabled] {
 
 .header__cart-item-title {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.3;
   letter-spacing: 0.045em;
   text-transform: uppercase;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 }
 
 .header__cart-item-price {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -1425,7 +1425,7 @@ select.input__elem option[disabled] {
 }
 
 .header__cart-item-list li {
-  margin: 0 0 12px;
+  margin: 0 0 6px;
 }
 
 .header__cart-item-list li:last-child {
@@ -1434,7 +1434,7 @@ select.input__elem option[disabled] {
 
 .header__cart-item-list p,.header__cart-item-list span {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 1.3;
   letter-spacing: 0.045em;
   display: inline-flex;
@@ -3502,6 +3502,26 @@ select.input__elem option[disabled] {
     min-width: 315px;
   }
 
+  .header__cart-list {
+    padding: 32px;
+  }
+
+  .header__cart-item-title {
+    font-size: 14px;
+  }
+
+  .header__cart-item-price {
+    font-size: 18px;
+  }
+
+  .header__cart-item-list li {
+    margin: 0 0 12px;
+  }
+
+  .header__cart-item-list p,.header__cart-item-list span {
+    font-size: 12px;
+  }
+
   .intro {
     margin-right: -60px;
     margin-left: -60px;
@@ -3966,6 +3986,25 @@ select.input__elem option[disabled] {
     padding: 0;
   }
 
+  .header__cart-item-img--wrap {
+    padding: 50% 0 0;
+    min-width: 150px;
+    width: 150px;
+  }
+
+  .header__cart-item-title {
+    font-size: 16px;
+    margin: 0 0 20px;
+  }
+
+  .header__cart-item-price {
+    font-size: 20px;
+  }
+
+  .header__cart-item-list p,.header__cart-item-list span {
+    font-size: 14px;
+  }
+
   .intro {
     margin-top: -230px;
   }
@@ -4270,6 +4309,10 @@ select.input__elem option[disabled] {
 
   .header__search-form .btn--search {
     display: inline-flex;
+  }
+
+  .header__cart-popup {
+    display: none;
   }
 
   .header--mobile-menu .header__nav-child {

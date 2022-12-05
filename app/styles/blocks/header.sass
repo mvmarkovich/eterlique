@@ -181,9 +181,10 @@
             transition: .2s ease-in-out
             opacity: 0
             visibility: hidden
+            display: @md-down none
 
         &-list
-            padding: 32px
+            padding: 24px @lg 32px
             max-height: 324px
             overflow: auto
 
@@ -197,11 +198,11 @@
 
                 &--wrap
                     position: relative
-                    padding: 50% 0 0
+                    padding: 33% 0 0 @xl 50% 0 0
                     overflow: hidden
                     margin: 0 20px 0 0
-                    min-width: 150px
-                    width: 150px
+                    min-width: 100px @xl 150px
+                    width: 100px @xl 150px
 
             &-info
                 display: flex
@@ -209,12 +210,12 @@
                 justify-content: space-between
 
             &-title
-                text: 500 16px 1.3 0.045em
+                text: 500 12px 1.3 0.045em @lg 14px @xl 16px
                 text-transform: uppercase
-                margin: 0 0 20px
+                margin: 0 0 16px @xl 0 0 20px
 
             &-price
-                text: 500 20px 1.5 0.04em
+                text: 500 14px 1.5 0.04em @lg 18px @xl 20px
                 text-transform: uppercase
 
             &-list
@@ -223,13 +224,13 @@
                 margin: 0
 
                 li
-                    margin: 0 0 12px
+                    margin: 0 0 6px @lg 0 0 12px
 
                     &:last-child
                         margin: 0
 
                 p, span
-                    text: 400 14px 1.3 0.045em
+                    text: 400 10px 1.3 0.045em @lg 12px @xl 14px
                     display: inline-flex
 
                 p
