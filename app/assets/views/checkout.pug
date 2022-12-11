@@ -1,0 +1,101 @@
+extends layouts/layout.pug
+
+block title
+    title Оформление заказа | Eterlique
+
+block content
+    .breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__list-item
+                a.breadcrumbs__list-link(href="main.html") Главная
+
+            li.breadcrumbs__list-item
+                a.breadcrumbs__list-link(href="catalog.html") Каталог
+
+            li.breadcrumbs__list-item
+                a.breadcrumbs__list-link(href="product-card.html") Брюки со стрелками
+
+            li.breadcrumbs__list-item
+                a.breadcrumbs__list-link(href="basket.html") Корзина
+
+            li.breadcrumbs__list-item.is--current
+                a.breadcrumbs__list-link(href="checkout.html") Оформление заказа
+
+    .main-block
+        h1 Оформление заказа
+
+        .checkout
+            form.checkout__form(action="/" method="/")
+                h3.form__title Личные данные
+
+                .input
+                    input.input__elem(type="text" name="checkout-name" placeholder="Имя")
+
+                .form__group
+                    .input
+                        input.input__elem(type="text" name="checkout-phone" placeholder="Телефон")
+
+                    .input
+                        input.input__elem(type="text" name="checkout-email" placeholder="Почта")
+
+                h3.form__title Доставка
+
+                .form__row
+                    .input
+                        input.input__checkbox#checkout-delivery-courier(type="text" name="checkout-delivery-courier")
+                        label.input__checkbox-label(for="checkout-delivery-courier") Курьер по Москве
+
+                    .input
+                        input.input__checkbox#checkout-delivery-boxberry(type="text" name="checkout-delivery-boxberry")
+                        label.input__checkbox-label(for="checkout-delivery-boxberry") Boxberry
+
+                .input
+                    input.input__elem(type="text" name="checkout-delivery-street" placeholder="Улица")
+
+                .form__group
+                    .input
+                        input.input__elem(type="text" name="checkout-delivery-house" placeholder="Дом")
+
+                    .input
+                        input.input__elem(type="text" name="checkout-delivery-housing" placeholder="Корпус")
+
+                .form__group
+                    .input
+                        input.input__elem(type="text" name="checkout-delivery-front" placeholder="Подъезд")
+
+                    .input
+                        input.input__elem(type="text" name="checkout-delivery-flat" placeholder="Кв/Офис")
+
+                .input
+                    textarea.input__elem(placeholder="Комментарий")
+
+                .form__row
+                    .input
+                        a.form__link(href="shipping-payment.html") Информация о доставке
+
+                    .input
+                        a.form__link(href="return.html") Информация о возврате
+
+                h3.form__title Оплата
+
+                .form__row
+                    .input
+                        input.input__checkbox#checkout-payment-(type="text" name="checkout-payment-")
+                        label.input__checkbox-label(for="checkout-delivery-courier") Курьер по Москве
+
+                    .input
+                        input.input__checkbox#checkout-payment-(type="text" name="checkout-payment-")
+                        label.input__checkbox-label(for="checkout-payment-") Boxberry
+                    
+
+                    
+
+
+                
+
+                
+
+                
+                
+
+        
